@@ -1,0 +1,230 @@
+  /* PC、スマホ共通スタイル */
+  body {
+      font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  }
+
+  img {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  p {
+      font-size: 15px;
+  }
+
+  .container {
+      max-width: min(calc(100% - 24px), 1080px);
+      margin: 0 auto;
+  }
+
+  .header-title {
+      position: absolute;
+      top: 10px;
+      right: 40px;
+  }
+
+  /* ボタン */
+  .btn {
+      border: black 1px solid;
+      padding: 10px 20px;
+      font-size: 10px;
+      text-decoration: none;
+  }
+
+  /* メインビジュアル */
+  .mv {
+      height: 100vh;
+      background-image: url(images/mainvisual.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+
+  /* マガジン */
+  .magazine {
+      padding-top: 48px;
+      padding-bottom: 48px;
+  }
+
+  .index-h2 {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .index-text {
+      text-align: center;
+  }
+
+  .mag-flex {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 40px;
+      margin: 0 auto 0 auto;
+  }
+
+  .article-pic {
+      position: relative;
+      display: block;
+  }
+
+  .mag-flex>div {
+      position: relative;
+      flex: 1;
+  }
+
+  .magazine-box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      background-color: rgb(0 0 0 / .5);
+      text-align: center;
+  }
+
+  /* ファッション */
+  .fashion {
+      height: 600px;
+      padding-top: 56px;
+      background-image: url(images/fashion.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .index-h2 .fashion {
+      padding-top: 24px;
+  }
+
+  /* カタログ&アンティーク */
+
+  .catalog-antique {
+      background-color: #f5f5f5;
+      padding: 60px 40px;
+  }
+
+  .catalog-antique .sec-title {
+      margin-bottom: 40px;
+  }
+
+  .catalog-antique .flex-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .catalog-antique .item {
+      width: 48%;
+      text-align: center;
+  }
+
+  .catalog-antique .item img {
+      width: 100%;
+  }
+
+  .catalog-antique .item p {
+      margin-bottom: 30px;
+      text-align: left;
+  }
+
+  .catalog-antique .item p:last-child {
+      margin-bottom: 0;
+  }
+
+  footer>.container {
+      padding: 80px;
+      background-color: #333;
+      color: white;
+  }
+
+  .footer-flex {
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+  .footer-flex>div {
+      flex: 1;
+  }
+
+  .footer-logo {
+      display: flex;
+      align-items: center;
+  }
+
+  .footer-list {
+      list-style-type: none;
+      padding-left: 0;
+  }
+
+  .footer-list li:before {
+      content: "- ";
+  }
+
+  .copyright {
+      text-align: center;
+      margin: 20px auto 20px auto;
+  }
+
+  /* 画面幅が767px以下のとき */
+  @media screen and (max-width: 767px) {
+
+      /* スマートフォン用のスタイルを指定する */
+      /* PC用ナビゲーション非表示 */
+      
+      /* メインヴィジュアル */
+    .mv {
+        background-position:center;
+        width: auto;
+    }
+      /* マガジン */
+      
+      .mag-flex {
+          display: block;
+      }
+
+      /* ファッション */
+      .fashion {
+          background-position: bottom;
+          background-size: cover;
+          padding: 0;
+          height: 400px;
+      }
+
+      /* カタログアンティーク */
+      .catalog-antique .flex-item {
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+      }
+.item {
+    width: 100%;
+}
+      .catalog-antique .flex-item {
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+      }
+
+      .anti-pic {
+          margin-top: 50px;
+      }
+
+      .footer-flex {
+          display: flex;
+          flex-direction: column;
+
+      }
+
+      .footer-logo {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 48px;
+      }
+  }
